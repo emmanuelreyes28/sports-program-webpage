@@ -1,3 +1,32 @@
+html {
+    font-family: "Montserrat", sans-serif;
+}
+
+.intro-container{
+    margin-top: 25px;
+    padding-top: 10px;
+}
+
+.intro-title{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.intro-p{
+    font-size: 20px;
+}
+
+.intro-img{
+    max-width: 90%;
+    max-height: 90%;
+    padding: 10px;
+}
+
+.intro-img-container{
+    display: flex;
+    justify-content: center;
+}
+
 .logo{
     max-height: 101px;
     width: 125px;
@@ -6,3 +35,5 @@
 .nav-link{
     margin: 50px 50px 0px 50px;
 }
+
+

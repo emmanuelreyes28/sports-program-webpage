@@ -1,11 +1,12 @@
 // import "./App.css";
 import Header from "./Header";
+import Introduction from "./Introduction";
 
 function App() {
   return (
     <div>
-      {/* <h1>Header 1</h1> */}
       <Header />
+      <Introduction />
     </div>
   );
 }
