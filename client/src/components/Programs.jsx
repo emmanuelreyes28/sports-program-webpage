@@ -5,10 +5,9 @@ import LilBallersLeagueCard from "./LilBallersLeagueCard";
 
 function Programs() {
   return (
-    // add class for row and cols to five card comp spacing
-    <div class="container">
-      <h1>PROGRAMS</h1>
-      <div className="div-programs">
+    <div className="container programs-div">
+      <h2 className="programs-header">PROGRAMS</h2>
+      <div className="card-group">
         <HoopsSchoolCard />
         <LilBallersCard />
         <LilBallersLeagueCard />

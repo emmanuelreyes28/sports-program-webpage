@@ -2,7 +2,7 @@ import React from "react";
 
 function HoopsSchoolCard() {
   return (
-    <div class="card">
+    <div class="card h-100 border border-3 border-primary rounded hoops-school-card">
       <img
         src="https://bballershoopsroswell.com/wp-content/uploads/bb-plugin/cache/3a_5v_girl-square-square.webp"
         alt="Shooting Basketball"

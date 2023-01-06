@@ -2,7 +2,7 @@ import React from "react";
 
 function LilBallersCard() {
   return (
-    <div class="card">
+    <div class="card h-100 border border-3 border-primary rounded lil-ballers-card">
       <img
         src="https://bballershoopsroswell.com/wp-content/uploads/bb-plugin/cache/3b_2-boys_dribbling-square-square.webp"
         alt="Lil Baller Bouncing Ball"
