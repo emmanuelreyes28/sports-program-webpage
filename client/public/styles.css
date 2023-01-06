@@ -27,6 +27,15 @@ html {
     justify-content: center;
 }
 
+.card{
+    width: 18rem;
+}
+
+.div-programs{
+    background-color: red;
+    display: flex;
+}
+
 .logo{
     max-height: 101px;
     width: 125px;
