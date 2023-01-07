@@ -2,9 +2,9 @@ import React from "react";
 
 function Introduction() {
   return (
-    <div class="container intro-container">
-      <div class="row">
-        <div class="col">
+    <div className="container intro-container">
+      <div className="row">
+        <div className="col">
           <div className="intro-title">
             <h1>
               <span>
@@ -33,7 +33,7 @@ function Introduction() {
             </p>
           </div>
         </div>
-        <div class="col">
+        <div className="col">
           <div className="intro-img-container">
             <img
               className="intro-img"

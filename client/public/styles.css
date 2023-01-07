@@ -58,6 +58,28 @@ html {
     /* margin-left: 15px; */
 }
 
+.testimonial-div{
+    /* background-color: blue; */
+    padding-bottom: 10px;
+    font-family: 'Roboto Slab', serif;
+    font-size: 25px;
+}
+
+.testimonial{
+    /* padding-bottom: 10px; */
+    max-width: 80%;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+.carousel-item{
+    height: 32rem;
+    background: #777;
+    color: white;
+    position: relative;
+}
+
 .logo{
     max-height: 101px;
     width: 125px;
