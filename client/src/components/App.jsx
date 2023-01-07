@@ -3,6 +3,7 @@ import Header from "./Header";
 import Introduction from "./Introduction";
 import Programs from "./Programs";
 import Testimonials from "./Testimonials";
+import Coaches from "./Coaches";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Introduction />
       <Programs />
       <Testimonials />
+      <Coaches />
     </div>
   );
 }

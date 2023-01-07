@@ -34,7 +34,7 @@ html {
     /* max-width: 50%; */
 }
 
-.programs-div{
+.programs-div, .coaches-div{
     /* background-color: red; */
     padding-top: 15px; 
     padding-bottom: 15px;
@@ -78,6 +78,24 @@ html {
     background: #777;
     color: white;
     position: relative;
+}
+
+.coaches-div{
+    /* background-color: red; */
+}
+
+.coach-row{
+    padding-top: 5px;
+}
+
+.coach-img{
+    width: 100%;
+    border-radius: 5%;
+}
+
+.coach-description{
+    /* display: flex;
+    align-items: center; */
 }
 
 .logo{
