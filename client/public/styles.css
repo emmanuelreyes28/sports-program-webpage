@@ -1,5 +1,17 @@
 html {
-    font-family: 'Roboto Slab', serif;
+    font-family: "Roboto Slab", serif;
+}
+
+body{
+    background-color: #f08400 !important;
+    background-image: url("https://www.transparenttextures.com/patterns/basketball.png");
+}
+
+footer{
+    /* background-color: red; */
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: "Roboto Slab", serif;
 }
 
 .intro-container{
@@ -7,6 +19,7 @@ html {
     padding-top: 10px;
     /* background-color: blue; */
     font-family: 'Roboto Slab', serif;
+    color: white;
 }
 
 .intro-title{
@@ -43,6 +56,7 @@ html {
 
 .programs-header{
     text-align: center;
+    color: white
 }
 
 .hoops-school-card{
@@ -82,6 +96,7 @@ html {
 
 .coaches-div{
     /* background-color: red; */
+    color: white;
 }
 
 .coach-row{
@@ -98,10 +113,34 @@ html {
     align-items: center; */
 }
 
+.socials{
+    color: white;
+    padding-top: 20px;
+}
+
+.copyright{
+    /* position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%); */
+}
+
+.icon{
+    color: white;
+    margin-right: 20px;
+    font-size: 28px;
+}
+
+.icon:hover{
+    color: black;
+}
+
 .logo{
     max-height: 101px;
     width: 125px;
 }
+
+
 
 .nav-link{
     margin: 50px 50px 0px 50px;
