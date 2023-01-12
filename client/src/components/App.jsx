@@ -5,16 +5,18 @@ import Introduction from "./Introduction";
 import Programs from "./Programs";
 import Testimonials from "./Testimonials";
 import Coaches from "./Coaches";
+import SignUpForm from "./SignUpForm";
 
 function App() {
   return (
     <div>
-      <Header />
+      {/* <Header />
       <Introduction />
       <Programs />
       <Testimonials />
       <Coaches />
-      <Footer />
+      <Footer /> */}
+      <SignUpForm />
     </div>
   );
 }
