@@ -1,6 +1,39 @@
-import React from "react";
+import React, { useState } from "react";
+import DatePicker from "react-datepicker";
+import { FaRegCalendarAlt } from "react-icons/fa";
+
+import "react-datepicker/dist/react-datepicker.css";
 
 function SignUpForm() {
+  const [birthDate, setBirthDate] = useState(new Date());
+
+  // need to figure out how to update state on select dropdown items
+
+  // useState object to store playerInfo
+  const [player, setPlayer] = useState({
+    fName: "",
+    lName: "",
+    birthDate: "",
+    gender: "",
+    age: "",
+    jerseySize: "",
+    sessionTime: "",
+  });
+
+  //use object desctructuring to update player info
+  function handleChange(event) {
+    const { name, value } = event.target;
+
+    setPlayer((prevValue) => {
+      return {
+        ...prevValue,
+        [name]: value,
+      };
+    });
+  }
+
+  console.log(player);
+
   return (
     <div className="sign-up-form">
       <form class="row g-3">
@@ -8,40 +41,58 @@ function SignUpForm() {
         <div className="row g-3">
           <div class="col-md-4">
             <label for="playerFirstName" class="form-label">
-              Player's First Name
+              Player's First Name <span className="requiredAsterisk">*</span>
             </label>
-            <input type="email" class="form-control" id="playerFirstName" />
+            <input
+              onChange={handleChange}
+              name="fName"
+              value={player.fName}
+              type="text"
+              class="form-control"
+              id="playerFirstName"
+            />
           </div>
           <div class="col-md-4">
             <label for="playerLastName" class="form-label">
-              Player's Last Name
+              Player's Last Name <span className="requiredAsterisk">*</span>
             </label>
-            <input type="text" class="form-control" id="playerLastName" />
+            <input
+              onChange={handleChange}
+              name="lName"
+              value={player.lName}
+              type="text"
+              class="form-control"
+              id="playerLastName"
+            />
           </div>
           <div class="col-md-4">
             <label for="playerBirthDate" class="form-label">
-              Player's Birth Date
+              Player's Birth Date <FaRegCalendarAlt />{" "}
+              <span className="requiredAsterisk">*</span>
             </label>
             {/* <input type="text" class="form-control" id="playerBirthDate" /> */}
-            <div class="input-group date" id="datepicker">
-              <input type="text" class="form-control" id="date" />
-              <span class="input-group-append">
-                <span class="input-group-text bg-light d-block">
-                  {/* <i class="fa fa-calendar"></i> */}
-                </span>
-              </span>
-            </div>
+            <DatePicker
+              selected={birthDate}
+              onChange={(date: Date) => setBirthDate(date)}
+              // onChange={handleChange}
+              // name="birthDate"
+              // value={player.birthDate}
+            />
           </div>
         </div>
         {/* Second Row  */}
         <div className="row g-3">
+          {/* <label for="playerGender">
+            Gender <span className="requiredAsterisk">*</span>
+          </label> */}
           <div class="col-4">
             <select class="form-select">
               <option selected>Gender</option>
-              <option value="1">Male</option>
-              <option value="2">Female</option>
+              <option value="1">Boy</option>
+              <option value="2">Girl</option>
             </select>
           </div>
+
           <div class="col-4">
             <select class="form-select">
               <option selected>Age</option>
@@ -50,11 +101,18 @@ function SignUpForm() {
             </select>
           </div>
           <div class="col-4">
-            <select class="form-select">
-              <option selected>Jersey Size</option>
-              <option value="1">Small</option>
-              <option value="2">Medium</option>
-              <option value="3">Large</option>
+            <label>Jersey Size</label>
+            <select
+              onChange={handleChange}
+              name="jerseySize"
+              class="form-select"
+            >
+              {/* <option selected>Jersey Size</option> */}
+              <option value={player.jerseySize}>YXS</option>
+              <option value="2">YS</option>
+              <option value="3">YM</option>
+              <option value="4">YL</option>
+              <option value="5">YXL</option>
             </select>
           </div>
         </div>
@@ -63,8 +121,8 @@ function SignUpForm() {
           <div class="col-12">
             <select class="form-select">
               <option selected>Session Time</option>
-              <option value="1">Tuesday</option>
-              <option value="2">Thursday</option>
+              <option value="1">Tuesday 6-6:50pm</option>
+              <option value="2">Thursday 5-5:50pm</option>
             </select>
           </div>
         </div>
@@ -72,20 +130,28 @@ function SignUpForm() {
         <div class="col-md-4">
           <label for="parentFirstName" class="form-label">
             Parent/Gaurdian First Name
+            <span className="requiredAsterisk">*</span>
           </label>
           <input type="text" class="form-control" id="parentFirstName" />
         </div>
         <div class="col-md-4">
           <label for="parentLastName" class="form-label">
-            Parent/Gaurdian Last Name
+            Parent/Gaurdian Last Name{" "}
+            <span className="requiredAsterisk">*</span>
           </label>
           <input type="text" class="form-control" id="parentLastName" />
         </div>
         <div class="col-md-4">
           <label for="parentPhoneNumber" class="form-label">
             Parent/Gaurdian Phone Number
+            <span className="requiredAsterisk">*</span>
           </label>
-          <input type="text" class="form-control" id="parentPhoneNumber" />
+          <input
+            type="tel"
+            class="form-control"
+            id="parentPhoneNumber"
+            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+          />
         </div>
         {/* Fifth Row */}
         <div className="row g-3">

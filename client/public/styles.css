@@ -121,6 +121,10 @@ footer{
     background-color: white;
 }
 
+.requiredAsterisk{
+    color: red;
+}
+
 .socials{
     color: white;
     padding-top: 20px;
