@@ -1,7 +1,4 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFacebook } from "@fortawesome/free-solid-svg-icons";
-import { BsFacebook } from "react-icons/fa";
 import { FaFacebook, FaInstagram, FaYelp, FaEnvelope } from "react-icons/fa";
 
 function Footer() {
