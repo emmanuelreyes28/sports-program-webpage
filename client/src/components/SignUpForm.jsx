@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function SignUpForm() {
+function SignUpForm(props) {
   // useState object to store playerInfo
   const [player, setPlayer] = useState({
     fName: "",
@@ -17,8 +17,8 @@ function SignUpForm() {
   //use object desctructuring to update player info
   function handleChange(event) {
     const { name, value } = event.target;
-
     setPlayer((prevValue) => {
+      props.handleData({ ...prevValue, [name]: value });
       return {
         ...prevValue,
         [name]: value,
@@ -28,7 +28,7 @@ function SignUpForm() {
 
   return (
     <div>
-      <form class="row g-3">
+      <div class="row g-3">
         {/* First Row */}
         <div className="row g-3">
           <div class="col-md-4">
@@ -186,7 +186,7 @@ function SignUpForm() {
           </div>
         </div>
         <div className="row g-3"></div>
-      </form>
+      </div>
     </div>
   );
 }
