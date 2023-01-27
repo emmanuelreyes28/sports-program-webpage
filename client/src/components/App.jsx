@@ -6,6 +6,8 @@ import Programs from "./Programs";
 import Testimonials from "./Testimonials";
 import Coaches from "./Coaches";
 import SignUpForm from "./SignUpForm";
+import ParentInfo from "./ParentInfo";
+import EnrollmentForm from "./EnrollmentForm";
 
 function App() {
   return (
@@ -16,7 +18,9 @@ function App() {
       <Testimonials />
       <Coaches />
       <Footer /> */}
-      <SignUpForm />
+      {/* <SignUpForm />
+      <ParentInfo /> */}
+      <EnrollmentForm />
     </div>
   );
 }
