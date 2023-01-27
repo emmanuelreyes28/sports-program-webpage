@@ -5,22 +5,24 @@ import ParentInfo from "./ParentInfo";
 function EnrollmentForm() {
   const [enrollmentInfo, setEnrollmentInfo] = useState({});
 
-  // function handlePlayerChange(newInfo) {
-  //   setEnrollmentInfo((prevInfo) => {
-  //     return {
-  //       ...prevInfo,
-  //       newInfo,
-  //     };
-  //   });
-  // }
-
   // useCallback hook in the parent component and pass the handlePlayerChange function
   // to the child component as a prop.
   const handlePlayerChange = useCallback((newInfo) => {
     setEnrollmentInfo((prevInfo) => {
       return {
         ...prevInfo,
-        newInfo,
+        ...newInfo,
+      };
+    });
+  }, []);
+
+  // when a change occurs in parent info component this callback function is triggered
+  // through the prop and merges existing info from enrollmentInfo
+  const handleParentChange = useCallback((newInfo) => {
+    setEnrollmentInfo((prevInfo) => {
+      return {
+        ...prevInfo,
+        ...newInfo, //use spread operator here to merge info to state object rather than overwriting
       };
     });
   }, []);
@@ -34,7 +36,7 @@ function EnrollmentForm() {
     <div className="sign-up-form">
       <div>
         <SignUpForm handleData={handlePlayerChange} />
-        {/* <ParentInfo /> */}
+        <ParentInfo handleData={handleParentChange} />
         <div className="row g-3">
           <div class="col-12">
             <button

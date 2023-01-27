@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 
-function ParentInfo() {
+function ParentInfo(props) {
   const [parent, setParent] = useState({
-    fName: "",
-    lName: "",
+    parentFirstName: "",
+    parentLastName: "",
     phone: "",
     email: "",
   });
@@ -12,6 +12,7 @@ function ParentInfo() {
     const { name, value } = event.target;
 
     setParent((prevValue) => {
+      props.handleData({ ...prevValue, [name]: value });
       return {
         ...prevValue,
         [name]: value,
@@ -28,8 +29,8 @@ function ParentInfo() {
           </label>
           <input
             onChange={handleChange}
-            name="fName"
-            value={parent.fName}
+            name="parentFirstName"
+            value={parent.parentFirstName}
             type="text"
             class="form-control"
             id="parentFirstName"
@@ -42,8 +43,8 @@ function ParentInfo() {
           </label>
           <input
             onChange={handleChange}
-            name="lName"
-            value={parent.lName}
+            name="parentLastName"
+            value={parent.parentLastName}
             type="text"
             class="form-control"
             id="parentLastName"
